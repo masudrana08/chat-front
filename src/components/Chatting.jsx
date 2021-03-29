@@ -9,7 +9,7 @@ function Chatting() {
     const {name, room} = queryString.parse(history.location.search)
 
     useEffect(() => {
-		socket = io("http://localhost:4000");
+		socket = io("https://chat-back1.herokuapp.com");
         socket.emit('join',{name, room}, (data)=>{
            console.log(data);
         })
